@@ -112,6 +112,13 @@ export type HashAlgorithm = false | "sha256" | "sha384" | "sha512";
 
 export type VitePluginSymfonyOptions = {
   /**
+   * Override the origin for every dev entrypoint.
+   * Useful when you use a proxy server.
+   * @default null
+   */
+  originOverride: null | string;
+
+  /**
    * Web directory root
    * Relative file path from project directory root.
    * @default 'public'
